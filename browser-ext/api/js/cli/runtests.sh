@@ -64,6 +64,9 @@ if [ $SYSTEM = "Linux" ]; then
 elif [ $SYSTEM = "Darwin" ]; then
   # homebrew install
   POSTGRES_BIN_DIR="/usr/local/bin"
+elif [ $SYSTEM = "OpenBSD" ]; then
+  # OpenBSD Ports
+  POSTGRES_BIN_DIR="/usr/local/bin"
 fi
 
 if [ ! -d "$POSTGRES_DATA_DIR" ]; then
