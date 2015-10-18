@@ -13,7 +13,11 @@ CLOSURE_STRICT_FLAGS=--language_in ECMASCRIPT5_STRICT --warning_level VERBOSE --
 ifeq ($(shell uname),Darwin)
   GOOGLE_CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 else
-  GOOGLE_CHROME=google-chrome
+  ifeq ($(shell uname),OpenBSD)
+    GOOGLE_CHROME=chrome
+  else
+    GOOGLE_CHROME=google-chrome
+  endif
 endif
 
 BUILD_DIR:=$(shell pwd)/build
