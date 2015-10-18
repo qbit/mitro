@@ -35,7 +35,7 @@ def copy_dir(subdir, tempdir):
     assert tempdir[-1] != '/'
     tempdir += '/'
     # -a: archive mode; keeps permissions etc
-    args = ['cp', '-a', subdir, tempdir]
+    args = ['cp', '-p', subdir, tempdir]
     process = subprocess.Popen(args)
     code = process.wait()
     assert code == 0
