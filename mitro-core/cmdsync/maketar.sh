@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Create standalone tar for Google Apps syncing
 # This is really, really gross, but it gets the job done for the moment
 
